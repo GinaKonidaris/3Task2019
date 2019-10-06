@@ -15,7 +15,7 @@ namespace Task1_18013130GADE
         public int Health { get; internal set; }
         public string Symbol { get; internal set; }
         public override void Move(Direction d)
-        {
+        { //moves unit in another direction
             switch (d)
             {
                 case Direction.North:
@@ -53,7 +53,7 @@ namespace Task1_18013130GADE
         }
 
         private int DistanceTo(Unit u)
-        {
+        { //checks the distance between units
             if (u.GetType() == typeof(MeleeUnit))
             {
                 MeleeUnit n = (MeleeUnit)u;
@@ -67,7 +67,7 @@ namespace Task1_18013130GADE
         }
 
         public Direction DirectionTo(Unit u)
-        {
+        {    //changes direction
             if (u.GetType() == typeof(MeleeUnit))
             {
                 MeleeUnit n = (MeleeUnit)u;
@@ -94,7 +94,7 @@ namespace Task1_18013130GADE
             }
         }
         public override void Combat(Unit u)
-        {
+        {  //starts combat
             if (u.GetType() == typeof(MeleeUnit))
             {
                 Health -= ((MeleeUnit)u).attack;
@@ -107,7 +107,7 @@ namespace Task1_18013130GADE
             }
         }
         public override bool Inranged(Unit u)
-        {
+        { //checks if unit is in range
             if (u.GetType() == typeof(MeleeUnit))
             {
                 MeleeUnit n = (MeleeUnit)u;
@@ -123,7 +123,7 @@ namespace Task1_18013130GADE
             return false;
         }
         public override Unit Closest(Unit[] units)
-        {
+        {   //checks for the closest unit to
             Unit closest = this;
             int closestDistance = 50;
 
@@ -141,7 +141,7 @@ namespace Task1_18013130GADE
             return closest;
         }
         public override bool Isdead()
-        {
+        {  //checks if unit is alive
             if (Health < +0)
             {
                 return false;
@@ -152,7 +152,7 @@ namespace Task1_18013130GADE
             }
         }
         public override string Tostring()
-        {
+        {   //gives information on MeleeUnit
             return "MU" + xpos + "," + ypos + "," + Health + "," + Name + team;
         }
     }

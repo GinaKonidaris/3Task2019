@@ -9,7 +9,7 @@ using System.Drawing;
 namespace Task1_18013130GADE
 {
     class Map
-    {
+    {  //makes map
         int numUnits = 0;
         TextBox txtInfo;
         Random r = new Random();
@@ -27,7 +27,7 @@ namespace Task1_18013130GADE
         }
 
         public Map(int maxX, int maxY, int numUnits)
-        {
+        {  //spawns units on map
             units = new Unit[numUnits];
             for (int i = 0; i < numUnits; i++)
             {

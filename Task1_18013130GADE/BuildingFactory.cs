@@ -93,7 +93,7 @@ namespace Task1_18013130GADE
             throw new NotImplementedException();
         }
         public override bool Isdead()
-        {
+        {  //checks to see if factory is dead
             if (health < +0)
             {
                 return false;
@@ -104,7 +104,7 @@ namespace Task1_18013130GADE
             }
         }
         public BuildingFactory(int x, int y, int Health, string Team, string Symbol, int resourcesamount, int rescourcesremainin)
-        {
+        {  
             xpos -= x;
             ypos = y;
             Health = health;
@@ -112,7 +112,7 @@ namespace Task1_18013130GADE
             Symbol = symbol;
         }
         public override string Tostring()
-        {
+        { //gives information on Factory
             return "BR" + Xpos + "," + Ypos + "," + health +symbol+ spawnpostion + team ;
         }
 

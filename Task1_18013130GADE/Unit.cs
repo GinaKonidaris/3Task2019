@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Task1_18013130GADE
-{
+{ //base class
     public enum Direction { North, East, South, West };
 
     public abstract class Unit

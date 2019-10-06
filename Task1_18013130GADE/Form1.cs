@@ -41,7 +41,7 @@ namespace Task1_18013130GADE
             
         }
         private void Button_click(object sender, EventArgs e)
-        {
+        {    //checks when a button is clicked
             int x = ((Button)sender).Location.X / SIZE - groupBox1.Location.X / SIZE;
             int y = ((Button)sender).Location.Y / SIZE - groupBox1.Location.Y / SIZE;
             foreach (MeleeUnit u in map.Units)
@@ -79,14 +79,14 @@ namespace Task1_18013130GADE
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
-        {
+        {   //timer components
             engine.UpdateMap();
             txtInfo.Text = DateTime.Now.ToLongTimeString();
             DisplayMap();
         }
 
         private void btnsave_Click(object sender, EventArgs e)
-        {
+        { //saves game
             Form1 b = new Form1();
             b.Name = txtName.Text;
             BinaryFormatter bf = new BinaryFormatter();
@@ -107,7 +107,7 @@ namespace Task1_18013130GADE
         }
 
         private void btnload_Click(object sender, EventArgs e)
-        {
+        {  //loads game
             Form1 b = new Form1();
 
             BinaryFormatter bf = new BinaryFormatter();

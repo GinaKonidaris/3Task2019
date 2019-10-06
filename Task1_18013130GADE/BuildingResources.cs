@@ -59,7 +59,7 @@ namespace Task1_18013130GADE
             }
         }
         public override bool Isdead()
-        {
+        {  //checks how many rescources are remaining
             if (resourceremaing < +0)
             {
                
@@ -71,7 +71,7 @@ namespace Task1_18013130GADE
             }
         }
         private int DistanceTo(BuildingResources r)
-        {
+        {  //checks distance between units and rescoures
             if (r.GetType() == typeof(BuildingResources))
             {
                 BuildingResources n = (BuildingResources)r;
@@ -93,7 +93,7 @@ namespace Task1_18013130GADE
             rescourcesremainin = resourceremaing;
             resourcesamount = ResourcePerGameTick ;
         }
-        public override string Tostring()//displays nuilding resources
+        public override string Tostring()//displays building resources
         {
             return "BR" + Xpos + "," + Ypos + "," + health + RT + ResourceRemaing + ResourcePerGameTick;
         }

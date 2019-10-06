@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Task1_18013130GADE
 {
     public abstract class Building
-    {
+    {  //base building class
         protected int Xpos;
         protected int Ypos;
         protected int team;

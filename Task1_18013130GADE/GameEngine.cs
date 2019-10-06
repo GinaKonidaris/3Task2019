@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Task1_18013130GADE
 {
     class GameEngine : Form
-    {
+    {   
         GroupBox groupBox1;
         private int round;
         Map map = new Map(20, 20, 20);
