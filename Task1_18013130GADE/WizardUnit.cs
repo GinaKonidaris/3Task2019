@@ -106,16 +106,16 @@ namespace Task1_18013130GADE
                 Health -= ((RangedUnit)u).Attack;
             }
             else if (u.GetType()== typeof(WizardUnit))
-            {
+            {// will not harm wizards
                 Health = ((WizardUnit)u).health;
                
             }
             else if(u.GetType()== typeof(BuildingFactory))
-            {
+            { //attack will do no damage
                 attack = 0;
             }
             else if(health <50)
-            {
+            {//hopefully will make wizard runaway -_-
                 xpos += ((WizardUnit)u).ypos;
             }
                 
@@ -137,9 +137,9 @@ namespace Task1_18013130GADE
             return false;
         }
         public override Unit Closest(Unit[] units)
-        {   //checks for the closest unit to
+        {   //checks for the closest unit in a block radius.
             Unit closest = this;
-            int closestDistance = 5;
+            int closestDistance = 100;
 
             foreach (Unit u in units)
             {
