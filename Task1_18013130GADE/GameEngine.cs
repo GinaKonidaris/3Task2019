@@ -49,11 +49,15 @@ namespace Task1_18013130GADE
                     b.Text = n.Symbol;
                     if (n.Team == 1)
                     {
-                        b.ForeColor = Color.Red;
+                        b.ForeColor = Color.LightPink;
+                    }
+                    else if (n.Team ==2)
+                    {
+                        b.ForeColor = Color.Purple;
                     }
                     else
                     {
-                        b.ForeColor = Color.Green;
+                        b.ForeColor = Color.Blue;
                     }
                     if (n.Isdead())
                     {
