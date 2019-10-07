@@ -64,6 +64,8 @@ namespace Task1_18013130GADE
             set { Team = value; }
         }
 
+        public int Health { get; internal set; }
+
         public void Spawn()// spawns building to other users
         {
             if (spawnpostion == unitproduce)

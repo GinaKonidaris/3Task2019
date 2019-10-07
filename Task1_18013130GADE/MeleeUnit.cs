@@ -93,7 +93,7 @@ namespace Task1_18013130GADE
                 return Direction.North;
             }
         }
-        public override void Combat(Unit u)
+        public override void Combat(Unit u , Building b)
         {  //starts combat
             if (u.GetType() == typeof(MeleeUnit))
             {
@@ -104,6 +104,11 @@ namespace Task1_18013130GADE
             {
                 Health -= ((RangedUnit)u).Attack;
                 Health -= ((RangedUnit)u).Attack;
+            }
+            else if(u.GetType()== typeof(BuildingFactory))
+            {
+                Health -= ((BuildingFactory)b).Health;
+                Health -= ((BuildingFactory)b).Health;
             }
         }
         public override bool Inranged(Unit u)
