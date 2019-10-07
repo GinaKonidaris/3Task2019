@@ -21,7 +21,7 @@ namespace Task1_18013130GADE
         protected string Name;
 
         abstract public void Move(Direction direction);
-        abstract public void Combat(Unit u ,Building b);
+        abstract public void Combat(Unit u);
         abstract public bool Inranged(Unit u);
         abstract public Unit Closest(Unit[] units);
         abstract public bool Isdead();

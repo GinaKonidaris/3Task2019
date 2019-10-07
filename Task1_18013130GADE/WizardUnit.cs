@@ -93,7 +93,7 @@ namespace Task1_18013130GADE
                 return Direction.North;
             }
         }
-        public override void Combat(Unit u, Building b)
+        public override void Combat(Unit u)
         {  //starts combat
             if (u.GetType() == typeof(MeleeUnit))
             {
@@ -119,9 +119,8 @@ namespace Task1_18013130GADE
                 xpos += ((WizardUnit)u).ypos;
             }
             else if (u.GetType() == typeof(BuildingFactory))
-            {
-                Health -= ((BuildingFactory)b).Health;
-                Health -= ((BuildingFactory)b).Health;
+            {//Building damage
+                Health -= Health;
             }
 
         }
