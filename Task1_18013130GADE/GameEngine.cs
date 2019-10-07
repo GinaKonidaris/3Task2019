@@ -53,7 +53,7 @@ namespace Task1_18013130GADE
                     }
                     else if (n.Team ==2)
                     {
-                        b.ForeColor = Color.Purple;
+                        b.ForeColor = Color.LightYellow;
                     }
                     else
                     {
