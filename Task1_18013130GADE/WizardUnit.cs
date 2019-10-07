@@ -105,6 +105,15 @@ namespace Task1_18013130GADE
                 Health -= ((RangedUnit)u).Attack;
                 Health -= ((RangedUnit)u).Attack;
             }
+            else if (u.GetType()== typeof(WizardUnit))
+            {
+                Health = ((WizardUnit)u).health;
+               
+            }
+            else if(u.GetType()== typeof(BuildingFactory))
+            {
+                attack = 0;
+            }
         }
         public override bool Inranged(Unit u)
         { //checks if unit is in range
