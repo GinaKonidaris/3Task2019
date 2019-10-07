@@ -114,6 +114,11 @@ namespace Task1_18013130GADE
             {
                 attack = 0;
             }
+            else if(health <50)
+            {
+                xpos += ((WizardUnit)u).ypos;
+            }
+                
         }
         public override bool Inranged(Unit u)
         { //checks if unit is in range
@@ -134,7 +139,7 @@ namespace Task1_18013130GADE
         public override Unit Closest(Unit[] units)
         {   //checks for the closest unit to
             Unit closest = this;
-            int closestDistance = 50;
+            int closestDistance = 5;
 
             foreach (Unit u in units)
             {
@@ -148,7 +153,7 @@ namespace Task1_18013130GADE
                 }
             }
             return closest;
-        }
+        }      
         public override bool Isdead()
         {  //checks if unit is alive
             if (Health < +0)
